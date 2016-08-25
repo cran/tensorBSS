@@ -1,5 +1,5 @@
-fe9877cde12efc739516cd1ca6e41df9 *DESCRIPTION
-c6ba1badb4bc1c635b9280e0401882d5 *NAMESPACE
+7c80e1771c98f6a887dfc152c40d022c *DESCRIPTION
+167e1237e049af3af40888bb0fe122e8 *NAMESPACE
 fc5527d768e99f90d9fc3051b8d9fb77 *R/cyclicalPermute.R
 50e7cb66ea130dd5914eac6039a93721 *R/eigenVectors.R
 f218667f8c59150a4bcb14aa92afbfa3 *R/mAutoCovMatrix.R
@@ -22,6 +22,7 @@ f4fe82094bf89a7ec53461d377f5f3ba *R/selectComponents.R
 a569fc820b00b481e1782d12817f6aa3 *R/tFOBIRotate.R
 64da029827b4654ab2fb0e80f7040b5b *R/tJADE.R
 4c76b8392d576023b1d46ce3e14bd3f0 *R/tJADERotate.R
+0a6b9e0ef8227ed7bc805b8b8f0d3062 *R/tPCA.R
 a0e8a0a1a5ac89e73a5c4160ba631417 *R/tSOBI.R
 f1084f2985f9e3517f47db4dc2b56727 *R/tSOBIRotate.R
 bf0559279a0ab5b39e60b26509e683a4 *R/tensorCentering.R
@@ -41,8 +42,9 @@ f25205c359cb213d048717e59de86eb9 *man/selectComponents.Rd
 d624abb2a571c2678d419b0ee4c0d409 *man/tGFOBI.Rd
 095efc7b878ac5913089dc73084005a3 *man/tGJADE.Rd
 bf7917b8ba5761d7259f0b31003dfad5 *man/tJADE.Rd
+f50eb699a41c2fa4db5cf4645692998f *man/tPCA.Rd
 efa4b8688e8ffc799c7b7a10ae2f0660 *man/tSOBI.Rd
-0e3b2627e231484de2c125133a7f55e7 *man/tensorBSS-package.Rd
+0f6d99af3bfc80b811b362d52a4e7fb5 *man/tensorBSS-package.Rd
 2b097a99be13d4712b10682ce7439da8 *man/tensorCentering.Rd
 2e38772f7a598cbbac8190c684c56c7c *man/tensorStandardize.Rd
 ec9f15063ffeb36105d612c69facb209 *man/tensorTransform.Rd

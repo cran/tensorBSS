@@ -7,14 +7,14 @@ Blind Source Separation Methods for Tensor-Valued Observations
 }
 \description{
 Contains several utility functions for manipulating tensor-valued data (centering, multiplication from a single mode etc.) and 
-the implementations of the following blind source separation methods for tensor-valued data: tFOBI, tJADE, tgFOBI, tgJADE and tSOBI.
+the implementations of the following blind source separation methods for tensor-valued data: \sQuote{tPCA}, \sQuote{tFOBI}, \sQuote{tJADE}, \sQuote{tgFOBI}, \sQuote{tgJADE} and \sQuote{tSOBI}.
 }
 \details{
 \tabular{ll}{
 Package: \tab tensorBSS\cr
 Type: \tab Package\cr
-Version: \tab 0.1\cr
-Date: \tab 2016-04-18\cr
+Version: \tab 0.2\cr
+Date: \tab 2016-08-25\cr
 License: \tab GPL (>= 2)\cr
 }
 
