@@ -28,7 +28,7 @@ For a generalization for tensor-valued time series see \code{\link{tgFOBI}}.
 \value{
 A list with class 'tbss', inheriting from class 'bss', containing the following components: 
 \item{S }{Array of the same size as x containing the independent components.}
-\item{W }{List containing all the unmixing matrices}
+\item{W }{List containing all the unmixing matrices.}
 \item{Xmu }{The data location.}
 \item{datatype}{Character string with value "iid". Relevant for \code{\link{plot.tbss}}.}
 }

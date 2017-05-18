@@ -13,7 +13,7 @@ function(x, maxiter = 100, eps = 1e-06){
   
   stand <- tensorStandardize(x)
   x <- stand$x
-  rotat <- tJADERotate(x, maxiter=maxiter, eps=eps)
+  rotat <- tJADERotate(x, maxiter = maxiter, eps = eps)
   x <- rotat$x
   
   W <- list()

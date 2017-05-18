@@ -1,6 +1,4 @@
-#include "tBSS.h"
-#include <Rcpp.h>
-//#include <RcppArmadillo.h>
+#include "RcppArmadillo.h"
 
 using namespace Rcpp;
 using namespace arma;
@@ -8,7 +6,7 @@ using namespace arma;
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-SEXP rnormCubeC(SEXP varp1, SEXP varp2, SEXP varp3) {
+SEXP rnormCube(SEXP varp1, SEXP varp2, SEXP varp3) {
   
   int p1 = as<int>(varp1);
   int p2 = as<int>(varp2);
@@ -29,7 +27,7 @@ SEXP rnormCubeC(SEXP varp1, SEXP varp2, SEXP varp3) {
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-SEXP eigenVectorsC(SEXP varx) {
+SEXP eigenVectors(SEXP varx) {
   
   mat x = as<mat>(varx);
   
@@ -45,7 +43,7 @@ SEXP eigenVectorsC(SEXP varx) {
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-SEXP symmetricPowerC(SEXP varx, SEXP varr) {
+SEXP symmetricPower(SEXP varx, SEXP varr) {
   
   mat x = as<mat>(varx);
   float r = as<float>(varr);
@@ -64,7 +62,7 @@ SEXP symmetricPowerC(SEXP varx, SEXP varr) {
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-SEXP mFOBIMatrixC(SEXP varx) {
+SEXP mFOBIMatrix(SEXP varx) {
   
   cube xcube = as<cube>(varx);
   int rows = xcube.n_rows;
@@ -88,7 +86,7 @@ SEXP mFOBIMatrixC(SEXP varx) {
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-SEXP mJADEMatrixC(SEXP varx, SEXP vari, SEXP varj, SEXP varcov) {
+SEXP mJADEMatrix(SEXP varx, SEXP vari, SEXP varj, SEXP varcov) {
   
   cube xcube = as<cube>(varx);
   int rows = xcube.n_rows;
@@ -129,7 +127,7 @@ SEXP mJADEMatrixC(SEXP varx, SEXP vari, SEXP varj, SEXP varcov) {
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-SEXP matrixCovarianceC(SEXP varx) {
+SEXP matrixCovariance(SEXP varx) {
   
   cube xcube = as<cube>(varx);
   int rows = xcube.n_rows;
@@ -152,7 +150,7 @@ SEXP matrixCovarianceC(SEXP varx) {
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-SEXP mAutoCovMatrixC(SEXP varx, SEXP varlag) {
+SEXP mAutoCovMatrix(SEXP varx, SEXP varlag) {
   
   cube xcube = as<cube>(varx);
   int rows = xcube.n_rows;
@@ -174,7 +172,7 @@ SEXP mAutoCovMatrixC(SEXP varx, SEXP varlag) {
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-SEXP mTGFOBIMatrixC(SEXP varx, SEXP varlag) {
+SEXP mTGFOBIMatrix(SEXP varx, SEXP varlag) {
   
   cube xcube = as<cube>(varx);
   int rows = xcube.n_rows;
@@ -198,7 +196,7 @@ SEXP mTGFOBIMatrixC(SEXP varx, SEXP varlag) {
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-SEXP mTGJADEMatrixC(SEXP varx, SEXP vari, SEXP varj, SEXP varlags) {
+SEXP mTGJADEMatrix(SEXP varx, SEXP vari, SEXP varj, SEXP varlags) {
   
   cube xcube = as<cube>(varx);
   int rows = xcube.n_rows;
