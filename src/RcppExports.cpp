@@ -53,6 +53,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// mFOBIMatrixNorm
+SEXP mFOBIMatrixNorm(SEXP varx);
+RcppExport SEXP tensorBSS_mFOBIMatrixNorm(SEXP varxSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type varx(varxSEXP);
+    rcpp_result_gen = Rcpp::wrap(mFOBIMatrixNorm(varx));
+    return rcpp_result_gen;
+END_RCPP
+}
 // mJADEMatrix
 SEXP mJADEMatrix(SEXP varx, SEXP vari, SEXP varj, SEXP varcov);
 RcppExport SEXP tensorBSS_mJADEMatrix(SEXP varxSEXP, SEXP variSEXP, SEXP varjSEXP, SEXP varcovSEXP) {

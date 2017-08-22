@@ -1,11 +1,18 @@
 LOG of the CHANGES in the package tensorBSS
 
-Version 0.1:
-* First version submitted to CRAN
-
-Version 0.2:
-* Added the function tPCA()
+Version 0.3.1:
+* Added an option to use a normed TFOBI matrix to tFOBI()
+* Added a function tMD() for computing the MD-index of a Kronecker product of unmixing/mixing matrices
+* Updated the example of TNSS.SD()
+* Updated references
 
 Version 0.3:
 * Added the functions tNSS.SD(), tNSS.JD() and tNSS.TD.JD()
 * Added the parameter k to the function tJADERotate() to be ready for the inclusion of tkJADE in a later update
+
+Version 0.2:
+* Added the function tPCA()
+
+Version 0.1:
+* First version submitted to CRAN
+

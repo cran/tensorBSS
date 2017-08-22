@@ -1,10 +1,10 @@
 tFOBIRotate <-
-function(x){
+function(x, norm){
   r <- length(dim(x)) - 1
   
   rotateStack <- list()
   for(m in 1:r){
-    rotateStack[[m]] <- t(eigenVectors(mModeTFOBIMatrix(x, m)))
+    rotateStack[[m]] <- t(eigenVectors(mModeTFOBIMatrix(x, m, norm[m])))
   }
   
   

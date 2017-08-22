@@ -1,5 +1,10 @@
 mModeTFOBIMatrix <-
-function(x, m){
+function(x, m, norm){
   xm <- mFlatten(x, m)
-  mFOBIMatrix(xm)
+  if(norm == FALSE){
+    return(mFOBIMatrix(xm))
+  }
+  else{
+    return(mFOBIMatrixNorm(xm))
+  }
 }

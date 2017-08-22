@@ -32,7 +32,7 @@ A list with class 'tbss', inheriting from class 'bss', containing the following 
 \item{datatype}{Character string with value "ts". Relevant for \code{\link{plot.tbss}}.}
 }
 \references{
-\cite{Virta J., Nordhausen K. (2017): Blind source separation for nonstationary tensor-valued time series, \emph{submitted}, \bold{???},  ???--???.}
+\cite{Virta J., Nordhausen K. (2017): Blind source separation for nonstationary tensor-valued time series, to appear in 2017 IEEE 27th International Workshop on Machine Learning for Signal Processing (MLSP).}
 }
 \author{
 Joni Virta

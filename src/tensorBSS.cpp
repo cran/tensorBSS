@@ -83,6 +83,29 @@ SEXP mFOBIMatrix(SEXP varx) {
 
 
 
+// [[Rcpp::depends(RcppArmadillo)]]
+// [[Rcpp::export]]
+SEXP mFOBIMatrixNorm(SEXP varx) {
+  
+  cube xcube = as<cube>(varx);
+  int rows = xcube.n_rows;
+  int cols = xcube.n_cols;
+  int slices = xcube.n_slices;
+  
+  mat matFOBI(rows, rows, fill::zeros);
+  
+  for (int i = 0; i < slices; i++)
+  {
+    matFOBI = matFOBI + pow(norm(xcube.slice(i), "fro"), 2)*xcube.slice(i)*xcube.slice(i).t();
+  }
+  
+  matFOBI = matFOBI/(cols*slices);
+  
+  return Rcpp::wrap(matFOBI);
+}
+
+
+
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]

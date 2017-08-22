@@ -37,7 +37,7 @@ A list with class 'tbss', inheriting from class 'bss', containing the following 
 \item{datatype}{Character string with value "ts". Relevant for \code{\link{plot.tbss}}.}
 }
 \references{
-\cite{Virta, J. and Nordhausen, K., (2016), Blind source separation of tensor-valued time series, \emph{submitted}, \bold{???},  ???--???.} 
+\cite{Virta, J. and Nordhausen, K., (2017), Blind source separation of tensor-valued time series. Signal Processing 141, 204-216} 
 }
 \author{
 Joni Virta

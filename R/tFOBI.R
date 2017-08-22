@@ -1,5 +1,7 @@
 tFOBI <-
-function(x){
+function(x, norm = NULL){
+  
+  if(is.null(norm)) norm <- rep(FALSE, length(dim(x)) - 1)
   
   if(length(dim(x)) == 2){
     returnlist <- FOBI(t(x))
@@ -13,7 +15,7 @@ function(x){
   
   stand <- tensorStandardize(x)
   x <- stand$x
-  rotat <- tFOBIRotate(x)
+  rotat <- tFOBIRotate(x, norm)
   x <- rotat$x
   
   W <- list()
@@ -21,7 +23,7 @@ function(x){
     W[[i]] <- rotat$U[[i]]%*%stand$S[[i]]
   }
   
-  returnlist <- list(S = x, W = W, Xmu = xmu, datatype = "iid")
+  returnlist <- list(S = x, W = W, norm = norm, Xmu = xmu, datatype = "iid")
   
   class(returnlist) <- c("tbss", "bss") 
   
