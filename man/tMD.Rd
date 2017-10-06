@@ -25,7 +25,7 @@ The value of the MD index of the Kronecker product.
 \references{
 \cite{Ilmonen, P., Nordhausen, K., Oja, H. and Ollila, E. (2010), A New Performance Index for ICA: Properties, Computation and Asymptotic Analysis. In Vigneron, V., Zarzoso, V., Moreau, E., Gribonval, R. and Vincent, E. (editors) Latent Variable Analysis and Signal Separation, 229-236, Springer.}
 
-\cite{Virta, J., Li, B., Nordhausen, K. and Oja, H., (2016), Independent component analysis for tensor-valued data, \emph{submitted}, \bold{???},  ???--???. Preprint available on ArXiv {http://arxiv.org/abs/1602.00879}.}
+\cite{Virta, J., Li, B., Nordhausen, K. and Oja, H., (2017), Independent component analysis for tensor-valued data, Journal of Multivariate Analysis, \doi{10.1016/j.jmva.2017.09.008}}
 }
 \author{
 Joni Virta

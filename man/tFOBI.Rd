@@ -37,7 +37,7 @@ A list with class 'tbss', inheriting from class 'bss', containing the following 
 \item{datatype}{Character string with value "iid". Relevant for \code{\link{plot.tbss}}.}
 }
 \references{
-\cite{Virta, J., Li, B., Nordhausen, K. and Oja, H., (2016), Independent component analysis for tensor-valued data, \emph{submitted}, \bold{???},  ???--???. Preprint available on ArXiv {http://arxiv.org/abs/1602.00879}.} 
+\cite{Virta, J., Li, B., Nordhausen, K. and Oja, H., (2017), Independent component analysis for tensor-valued data, Journal of Multivariate Analysis, \doi{10.1016/j.jmva.2017.09.008}}
 }
 \author{
 Joni Virta
@@ -70,8 +70,7 @@ tfobi <- tFOBI(X)
 
 MD(tfobi$W[[1]], A1)
 MD(tfobi$W[[2]], A2) 
-MD(tfobi$W[[2]] \%x\% tfobi$W[[1]], A2 \%x\% A1)
-
+tMD(tfobi$W, list(A1, A2))
 
 # Digit data example
 

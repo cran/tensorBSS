@@ -68,7 +68,7 @@ tgfobi <- tgFOBI(X)
 
 MD(tgfobi$W[[1]], A1)
 MD(tgfobi$W[[2]], A2) 
-MD(tgfobi$W[[2]] \%x\% tgfobi$W[[1]], A2 \%x\% A1)
+tMD(tgfobi$W, list(A1, A2))
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

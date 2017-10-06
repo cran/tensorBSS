@@ -19,7 +19,7 @@ The m-mode covariance matrix provides a higher order analogy for the ordinary co
 The \code{m}-mode covariance matrix of \code{x} having the size \eqn{p_m \times p_m}{p_m x p_m}.
 }
 \references{
-\cite{Virta, J., Li, B., Nordhausen, K. and Oja, H., (2016), Independent component analysis for tensor-valued data, \emph{submitted}, \bold{???},  ???--???. Preprint available on ArXiv {http://arxiv.org/abs/1602.00879}.} 
+\cite{Virta, J., Li, B., Nordhausen, K. and Oja, H., (2017), Independent component analysis for tensor-valued data, Journal of Multivariate Analysis, \doi{10.1016/j.jmva.2017.09.008}}
 }
 \author{
 Joni Virta

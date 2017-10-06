@@ -1,9 +1,17 @@
 LOG of the CHANGES in the package tensorBSS
 
+Version 0.3.3:
+* Added tkJADE() for computing the faster "k"-version of TJADE
+* Updated references
+* Updated the examples of tFOBI(), tJADE(), tSOBI(), tgFOBI() and tgJADE() to use tMD()
+
+Version 0.3.2:
+* Added tSIR() for computing sliced inverse regression estimators for tensor data
+
 Version 0.3.1:
 * Added an option to use a normed TFOBI matrix to tFOBI()
 * Added a function tMD() for computing the MD-index of a Kronecker product of unmixing/mixing matrices
-* Updated the example of TNSS.SD()
+* Updated the example of tNSS.SD()
 * Updated references
 
 Version 0.3:

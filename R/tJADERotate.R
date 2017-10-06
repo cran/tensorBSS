@@ -9,7 +9,7 @@ function(x, k = NULL, maxiter, eps){
       this_k <- pm
     }
     else{
-      this_k <- min(k, pm)
+      this_k <- k[m]
     }
     ijStack <- NULL
     for(i in 1:pm){

@@ -68,7 +68,7 @@ tgjade <- tgJADE(X)
 
 MD(tgjade$W[[1]], A1)
 MD(tgjade$W[[2]], A2) 
-MD(tgjade$W[[2]] \%x\% tgjade$W[[1]], A2 \%x\% A1)
+tMD(tgjade$W, list(A1, A2))
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
