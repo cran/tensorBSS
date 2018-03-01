@@ -21,7 +21,7 @@ The m-mode autocovariance matrix provides a higher order analogy for the ordinar
 The \code{m}-mode autocovariance matrix of \code{x} with respect to \code{lag} having the size \eqn{p_m \times p_m}{p_m x p_m}.
 }
 \references{
-\cite{Virta, J. and Nordhausen, K., (2016), Blind source separation of tensor-valued time series, \emph{submitted}, \bold{???},  ???--???.} 
+\cite{Virta, J. and Nordhausen, K., (2017), Blind source separation of tensor-valued time series, Signal Processing, 141, 204-216, \doi{10.1016/j.sigpro.2017.06.008}} 
 }
 \author{
 Joni Virta

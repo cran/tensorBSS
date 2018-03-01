@@ -12,8 +12,8 @@ tgJADE(x, lags = 0:12, maxiter = 100, eps = 1e-06)
 \arguments{
   \item{x}{Numeric array of an order at least two. It is assumed that the last dimension corresponds to the time.}
   \item{lags}{Vector of integers. Defines the lags used for the computations of the autocovariances.}
-  \item{maxiter}{Maximum number of iterations. Passed on to \code{\link[JADE]{frjd}}.}
-  \item{eps}{Convergence tolerance. Passed on to \code{\link[JADE]{frjd}}.}
+  \item{maxiter}{Maximum number of iterations. Passed on to \code{\link[JADE]{rjd}}.}
+  \item{eps}{Convergence tolerance. Passed on to \code{\link[JADE]{rjd}}.}
 }
 \details{
 It is assumed that \eqn{S} is a tensor (array) of size \eqn{p_1 \times p_2 \times \ldots \times p_r}{p_1 x p_2 x ... x p_r} measured at time points \eqn{1, \ldots, T}{1, ..., T}.
@@ -37,7 +37,7 @@ A list with class 'tbss', inheriting from class 'bss', containing the following 
 \item{datatype}{Character string with value "ts". Relevant for \code{\link{plot.tbss}}.}
 }
 \references{
-\cite{Virta, J. and Nordhausen, K., (2017), Blind source separation of tensor-valued time series. Signal Processing 141, 204-216} 
+\cite{Virta, J. and Nordhausen, K., (2017), Blind source separation of tensor-valued time series. Signal Processing 141, 204-216, \doi{10.1016/j.sigpro.2017.06.008}}  
 }
 \author{
 Joni Virta
@@ -45,7 +45,7 @@ Joni Virta
 
 
 \seealso{
-\code{\link[tsBSS]{gJADE}}, \code{\link[JADE]{frjd}}, \code{\link{tJADE}}
+\code{\link[tsBSS]{gJADE}}, \code{\link[JADE]{rjd}}, \code{\link{tJADE}}
 }
 \examples{
 library("stochvol")

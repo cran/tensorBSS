@@ -16,8 +16,8 @@ tNSS.TD.JD(x, K = 12, lags = 0:12, n.cuts = NULL, eps = 1e-06, maxiter = 100, ..
   \item{K}{The number of equisized intervals into which the time range is divided. If the parameter \code{n.cuts} is non-\code{NULL} it takes preference over this argument.}
   \item{lags}{The lag set for the autocovariance matrices.}
   \item{n.cuts}{Either a interval cutoffs (the cutoffs are used to define the two intervals that are open below and closed above, e.g. \eqn{(a, b]}) or \code{NULL} (the parameter \code{K} is used to define the the amount of intervals).}
-  \item{eps}{Convergence tolerance for \code{\link[JADE]{frjd}}.}
-  \item{maxiter}{Maximum number of iterations for \code{\link[JADE]{frjd}}.}
+  \item{eps}{Convergence tolerance for \code{\link[JADE]{rjd}}.}
+  \item{maxiter}{Maximum number of iterations for \code{\link[JADE]{rjd}}.}
   \item{...}{Further arguments to be passed to or from methods.}
 }
 \details{
@@ -34,7 +34,7 @@ A list with class 'tbss', inheriting from class 'bss', containing the following 
 \item{datatype}{Character string with value "ts". Relevant for \code{\link{plot.tbss}}.}
 }
 \references{
-\cite{Virta J., Nordhausen K. (2017): Blind source separation for nonstationary tensor-valued time series, to appear in 2017 IEEE 27th International Workshop on Machine Learning for Signal Processing (MLSP).}
+\cite{Virta J., Nordhausen K. (2017): Blind source separation for nonstationary tensor-valued time series, 2017 IEEE 27th International Workshop on Machine Learning for Signal Processing (MLSP), \doi{10.1109/MLSP.2017.8168122}}
 }
 \author{
 Joni Virta

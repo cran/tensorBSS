@@ -28,7 +28,7 @@ A list containing the following components:
 \item{Xmu }{The data location.}
 }
 \references{
-\cite{Virta, J., Taskinen, S. and Nordhausen, K. (2016), Applying fully tensorial ICA to fMRI data, Signal Processing in Medicine and Biology Symposium (SPMB), 2016 IEEE.} 
+\cite{Virta, J., Taskinen, S. and Nordhausen, K. (2016), Applying fully tensorial ICA to fMRI data, Signal Processing in Medicine and Biology Symposium (SPMB), 2016 IEEE, \doi{10.1109/SPMB.2016.7846858}} 
 }
 \author{
 Joni Virta

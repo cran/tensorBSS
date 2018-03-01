@@ -242,3 +242,173 @@ SEXP mTGJADEMatrix(SEXP varx, SEXP vari, SEXP varj, SEXP varlags) {
   return Rcpp::wrap(matJADE);
 }
 
+
+// [[Rcpp::depends(RcppArmadillo)]]
+// [[Rcpp::export]]
+SEXP computeh(SEXP varuk, SEXP varxm, SEXP varnl) {
+  
+  cube xm = as<cube>(varxm);
+  int n = xm.n_slices;
+  
+  int nl = as<int>(varnl);
+  
+  vec uk = as<vec>(varuk);
+  
+  double h = 0;
+  
+  // Find X^t u and add its squared norm to the sum
+  if(nl == 1){
+    for (int i = 0; i < n; i++)
+    {
+      h = h + pow(norm((xm.slice(i).t())*uk, 2), 4);
+    }
+  }
+  if(nl == 2){
+    for (int i = 0; i < n; i++)
+    {
+      h = h + pow(norm((xm.slice(i).t())*uk, 2), 3);
+    }
+  }
+  if(nl == 3){
+    double temp = 0;
+    for (int i = 0; i < n; i++)
+    {
+      temp = norm((xm.slice(i).t())*uk, 2);
+      h = h + log(cosh(temp));
+    }
+  }
+  
+  h = h/n;
+  
+  return Rcpp::wrap(h);
+}
+
+
+// [[Rcpp::depends(RcppArmadillo)]]
+// [[Rcpp::export]]
+SEXP computeT(SEXP varuk, SEXP varxm, SEXP varnl) {
+  
+  cube xm = as<cube>(varxm);
+  int p = xm.n_rows;
+  int q = xm.n_cols;
+  int n = xm.n_slices;
+  
+  int nl = as<int>(varnl);
+  
+  vec uk = as<vec>(varuk);
+  
+  vec Tcol(p, fill::zeros);
+  
+  vec temp(q, fill::zeros);
+  
+  // Find X^t u and add its squared norm to the sum
+  if(nl == 1){
+    for (int i = 0; i < n; i++)
+    {
+      temp = (xm.slice(i).t())*uk;
+      Tcol = Tcol + 2*pow(norm(temp, 2), 2)*xm.slice(i)*temp;
+    }
+  }
+  if(nl == 2){
+    for (int i = 0; i < n; i++)
+    {
+      temp = (xm.slice(i).t())*uk;
+      Tcol = Tcol + 1.5*norm(temp, 2)*xm.slice(i)*temp;
+    }
+  }
+  if(nl == 3){
+    double temp2 = 0;
+    for (int i = 0; i < n; i++)
+    {
+      temp = (xm.slice(i).t())*uk;
+      temp2 = norm(temp, 2);
+      Tcol = Tcol + 0.5*(tanh(temp2)/temp2)*xm.slice(i)*temp;
+    }
+  }
+  
+  Tcol = Tcol/n;
+  
+  return Rcpp::wrap(Tcol);
+}
+
+
+// [[Rcpp::depends(RcppArmadillo)]]
+// [[Rcpp::export]]
+SEXP computed(SEXP varuk, SEXP varxm, SEXP varnl) {
+  
+  cube xm = as<cube>(varxm);
+  int n = xm.n_slices;
+  
+  int nl = as<int>(varnl);
+  
+  vec uk = as<vec>(varuk);
+  
+  double d = 0;
+  
+  // Find X^t u and add its squared norm to the sum
+  if(nl == 1){
+    for (int i = 0; i < n; i++)
+    {
+      d = d + 2*pow(norm((xm.slice(i).t())*uk, 2), 2);
+    }
+  }
+  if(nl == 2){
+    for (int i = 0; i < n; i++)
+    {
+      d = d + 1.5*norm((xm.slice(i).t())*uk, 2);
+    }
+  }
+  if(nl == 3){
+    double temp = 0;
+    for (int i = 0; i < n; i++)
+    {
+      temp = norm((xm.slice(i).t())*uk, 2);
+      d = d + 0.5*(tanh(temp)/temp);
+    }
+  }
+  
+  d = d/n;
+  
+  return Rcpp::wrap(d);
+}
+
+
+// [[Rcpp::depends(RcppArmadillo)]]
+// [[Rcpp::export]]
+SEXP computeb(SEXP varuk, SEXP varxm, SEXP varnl) {
+  
+  cube xm = as<cube>(varxm);
+  int n = xm.n_slices;
+  
+  int nl = as<int>(varnl);
+  
+  vec uk = as<vec>(varuk);
+  
+  double b = 0;
+  
+  // Find X^t u and add its squared norm to the sum
+  if(nl == 1){
+    for (int i = 0; i < n; i++)
+    {
+      b = b + 2*pow(norm((xm.slice(i).t())*uk, 2), 2);
+    }
+  }
+  if(nl == 2){
+    for (int i = 0; i < n; i++)
+    {
+      b = b + 0.75*norm((xm.slice(i).t())*uk, 2);
+    }
+  }
+  if(nl == 3){
+    double temp = 0;
+    for (int i = 0; i < n; i++)
+    {
+      temp = norm((xm.slice(i).t())*uk, 2);
+      b = b + 0.25*((1 - pow(tanh(temp), 2))*temp - tanh(temp))/pow(temp, 3);
+    }
+  }
+  
+  b = b/n;
+  
+  return Rcpp::wrap(b);
+}

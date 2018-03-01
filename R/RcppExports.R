@@ -2,42 +2,58 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 rnormCube <- function(varp1, varp2, varp3) {
-    .Call(tensorBSS_rnormCube, varp1, varp2, varp3)
+    .Call(`_tensorBSS_rnormCube`, varp1, varp2, varp3)
 }
 
 eigenVectors <- function(varx) {
-    .Call(tensorBSS_eigenVectors, varx)
+    .Call(`_tensorBSS_eigenVectors`, varx)
 }
 
 symmetricPower <- function(varx, varr) {
-    .Call(tensorBSS_symmetricPower, varx, varr)
+    .Call(`_tensorBSS_symmetricPower`, varx, varr)
 }
 
 mFOBIMatrix <- function(varx) {
-    .Call(tensorBSS_mFOBIMatrix, varx)
+    .Call(`_tensorBSS_mFOBIMatrix`, varx)
 }
 
 mFOBIMatrixNorm <- function(varx) {
-    .Call(tensorBSS_mFOBIMatrixNorm, varx)
+    .Call(`_tensorBSS_mFOBIMatrixNorm`, varx)
 }
 
 mJADEMatrix <- function(varx, vari, varj, varcov) {
-    .Call(tensorBSS_mJADEMatrix, varx, vari, varj, varcov)
+    .Call(`_tensorBSS_mJADEMatrix`, varx, vari, varj, varcov)
 }
 
 matrixCovariance <- function(varx) {
-    .Call(tensorBSS_matrixCovariance, varx)
+    .Call(`_tensorBSS_matrixCovariance`, varx)
 }
 
 mAutoCovMatrix <- function(varx, varlag) {
-    .Call(tensorBSS_mAutoCovMatrix, varx, varlag)
+    .Call(`_tensorBSS_mAutoCovMatrix`, varx, varlag)
 }
 
 mTGFOBIMatrix <- function(varx, varlag) {
-    .Call(tensorBSS_mTGFOBIMatrix, varx, varlag)
+    .Call(`_tensorBSS_mTGFOBIMatrix`, varx, varlag)
 }
 
 mTGJADEMatrix <- function(varx, vari, varj, varlags) {
-    .Call(tensorBSS_mTGJADEMatrix, varx, vari, varj, varlags)
+    .Call(`_tensorBSS_mTGJADEMatrix`, varx, vari, varj, varlags)
+}
+
+computeh <- function(varuk, varxm, varnl) {
+    .Call(`_tensorBSS_computeh`, varuk, varxm, varnl)
+}
+
+computeT <- function(varuk, varxm, varnl) {
+    .Call(`_tensorBSS_computeT`, varuk, varxm, varnl)
+}
+
+computed <- function(varuk, varxm, varnl) {
+    .Call(`_tensorBSS_computed`, varuk, varxm, varnl)
+}
+
+computeb <- function(varuk, varxm, varnl) {
+    .Call(`_tensorBSS_computeb`, varuk, varxm, varnl)
 }
 

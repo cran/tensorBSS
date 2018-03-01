@@ -5,7 +5,9 @@ k_tJADE <-
       k <- rep(1, length(dim(x)) - 1)
     }
     
-    if(length(dim(x)) == 2){
+    r <- length(dim(x)) - 1
+    
+    if(r == 1){
       returnlist <- k_JADE(t(x), k = k[1], eps = eps, maxiter = maxiter)
       returnlist$S <- t(returnlist$S)
       returnlist2 <- list(S = returnlist$S, W = returnlist$W, Xmu = returnlist$Xmu, k = k, datatype = "iid")
@@ -20,8 +22,14 @@ k_tJADE <-
     x <- rotat$x
     
     W <- list()
-    for(i in 1:length(xtFOBI$W)){
-      W[[i]] <- rotat$U[[i]]%*%xtFOBI$W[[i]]
+    for(i in 1:r){
+      if(k[i] == 0){
+        W[[i]] <- diag(dim(x)[i])
+        x <- tensorTransform(x, solve(xtFOBI$W[[i]]), i)
+      }
+      else{
+        W[[i]] <- rotat$U[[i]]%*%xtFOBI$W[[i]]
+      }
     }
     
     returnlist <- list(S = x, W = W, Xmu = xtFOBI$Xmu, k = k, datatype = "iid")
@@ -30,3 +38,5 @@ k_tJADE <-
     
     return(returnlist)
   }
+
+

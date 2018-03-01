@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 // rnormCube
 SEXP rnormCube(SEXP varp1, SEXP varp2, SEXP varp3);
-RcppExport SEXP tensorBSS_rnormCube(SEXP varp1SEXP, SEXP varp2SEXP, SEXP varp3SEXP) {
+RcppExport SEXP _tensorBSS_rnormCube(SEXP varp1SEXP, SEXP varp2SEXP, SEXP varp3SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -21,7 +21,7 @@ END_RCPP
 }
 // eigenVectors
 SEXP eigenVectors(SEXP varx);
-RcppExport SEXP tensorBSS_eigenVectors(SEXP varxSEXP) {
+RcppExport SEXP _tensorBSS_eigenVectors(SEXP varxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -32,7 +32,7 @@ END_RCPP
 }
 // symmetricPower
 SEXP symmetricPower(SEXP varx, SEXP varr);
-RcppExport SEXP tensorBSS_symmetricPower(SEXP varxSEXP, SEXP varrSEXP) {
+RcppExport SEXP _tensorBSS_symmetricPower(SEXP varxSEXP, SEXP varrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -44,7 +44,7 @@ END_RCPP
 }
 // mFOBIMatrix
 SEXP mFOBIMatrix(SEXP varx);
-RcppExport SEXP tensorBSS_mFOBIMatrix(SEXP varxSEXP) {
+RcppExport SEXP _tensorBSS_mFOBIMatrix(SEXP varxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -55,7 +55,7 @@ END_RCPP
 }
 // mFOBIMatrixNorm
 SEXP mFOBIMatrixNorm(SEXP varx);
-RcppExport SEXP tensorBSS_mFOBIMatrixNorm(SEXP varxSEXP) {
+RcppExport SEXP _tensorBSS_mFOBIMatrixNorm(SEXP varxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -66,7 +66,7 @@ END_RCPP
 }
 // mJADEMatrix
 SEXP mJADEMatrix(SEXP varx, SEXP vari, SEXP varj, SEXP varcov);
-RcppExport SEXP tensorBSS_mJADEMatrix(SEXP varxSEXP, SEXP variSEXP, SEXP varjSEXP, SEXP varcovSEXP) {
+RcppExport SEXP _tensorBSS_mJADEMatrix(SEXP varxSEXP, SEXP variSEXP, SEXP varjSEXP, SEXP varcovSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -80,7 +80,7 @@ END_RCPP
 }
 // matrixCovariance
 SEXP matrixCovariance(SEXP varx);
-RcppExport SEXP tensorBSS_matrixCovariance(SEXP varxSEXP) {
+RcppExport SEXP _tensorBSS_matrixCovariance(SEXP varxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -91,7 +91,7 @@ END_RCPP
 }
 // mAutoCovMatrix
 SEXP mAutoCovMatrix(SEXP varx, SEXP varlag);
-RcppExport SEXP tensorBSS_mAutoCovMatrix(SEXP varxSEXP, SEXP varlagSEXP) {
+RcppExport SEXP _tensorBSS_mAutoCovMatrix(SEXP varxSEXP, SEXP varlagSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -103,7 +103,7 @@ END_RCPP
 }
 // mTGFOBIMatrix
 SEXP mTGFOBIMatrix(SEXP varx, SEXP varlag);
-RcppExport SEXP tensorBSS_mTGFOBIMatrix(SEXP varxSEXP, SEXP varlagSEXP) {
+RcppExport SEXP _tensorBSS_mTGFOBIMatrix(SEXP varxSEXP, SEXP varlagSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -115,7 +115,7 @@ END_RCPP
 }
 // mTGJADEMatrix
 SEXP mTGJADEMatrix(SEXP varx, SEXP vari, SEXP varj, SEXP varlags);
-RcppExport SEXP tensorBSS_mTGJADEMatrix(SEXP varxSEXP, SEXP variSEXP, SEXP varjSEXP, SEXP varlagsSEXP) {
+RcppExport SEXP _tensorBSS_mTGJADEMatrix(SEXP varxSEXP, SEXP variSEXP, SEXP varjSEXP, SEXP varlagsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -126,4 +126,79 @@ BEGIN_RCPP
     rcpp_result_gen = Rcpp::wrap(mTGJADEMatrix(varx, vari, varj, varlags));
     return rcpp_result_gen;
 END_RCPP
+}
+// computeh
+SEXP computeh(SEXP varuk, SEXP varxm, SEXP varnl);
+RcppExport SEXP _tensorBSS_computeh(SEXP varukSEXP, SEXP varxmSEXP, SEXP varnlSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type varuk(varukSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type varxm(varxmSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type varnl(varnlSEXP);
+    rcpp_result_gen = Rcpp::wrap(computeh(varuk, varxm, varnl));
+    return rcpp_result_gen;
+END_RCPP
+}
+// computeT
+SEXP computeT(SEXP varuk, SEXP varxm, SEXP varnl);
+RcppExport SEXP _tensorBSS_computeT(SEXP varukSEXP, SEXP varxmSEXP, SEXP varnlSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type varuk(varukSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type varxm(varxmSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type varnl(varnlSEXP);
+    rcpp_result_gen = Rcpp::wrap(computeT(varuk, varxm, varnl));
+    return rcpp_result_gen;
+END_RCPP
+}
+// computed
+SEXP computed(SEXP varuk, SEXP varxm, SEXP varnl);
+RcppExport SEXP _tensorBSS_computed(SEXP varukSEXP, SEXP varxmSEXP, SEXP varnlSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type varuk(varukSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type varxm(varxmSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type varnl(varnlSEXP);
+    rcpp_result_gen = Rcpp::wrap(computed(varuk, varxm, varnl));
+    return rcpp_result_gen;
+END_RCPP
+}
+// computeb
+SEXP computeb(SEXP varuk, SEXP varxm, SEXP varnl);
+RcppExport SEXP _tensorBSS_computeb(SEXP varukSEXP, SEXP varxmSEXP, SEXP varnlSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type varuk(varukSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type varxm(varxmSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type varnl(varnlSEXP);
+    rcpp_result_gen = Rcpp::wrap(computeb(varuk, varxm, varnl));
+    return rcpp_result_gen;
+END_RCPP
+}
+
+static const R_CallMethodDef CallEntries[] = {
+    {"_tensorBSS_rnormCube", (DL_FUNC) &_tensorBSS_rnormCube, 3},
+    {"_tensorBSS_eigenVectors", (DL_FUNC) &_tensorBSS_eigenVectors, 1},
+    {"_tensorBSS_symmetricPower", (DL_FUNC) &_tensorBSS_symmetricPower, 2},
+    {"_tensorBSS_mFOBIMatrix", (DL_FUNC) &_tensorBSS_mFOBIMatrix, 1},
+    {"_tensorBSS_mFOBIMatrixNorm", (DL_FUNC) &_tensorBSS_mFOBIMatrixNorm, 1},
+    {"_tensorBSS_mJADEMatrix", (DL_FUNC) &_tensorBSS_mJADEMatrix, 4},
+    {"_tensorBSS_matrixCovariance", (DL_FUNC) &_tensorBSS_matrixCovariance, 1},
+    {"_tensorBSS_mAutoCovMatrix", (DL_FUNC) &_tensorBSS_mAutoCovMatrix, 2},
+    {"_tensorBSS_mTGFOBIMatrix", (DL_FUNC) &_tensorBSS_mTGFOBIMatrix, 2},
+    {"_tensorBSS_mTGJADEMatrix", (DL_FUNC) &_tensorBSS_mTGJADEMatrix, 4},
+    {"_tensorBSS_computeh", (DL_FUNC) &_tensorBSS_computeh, 3},
+    {"_tensorBSS_computeT", (DL_FUNC) &_tensorBSS_computeT, 3},
+    {"_tensorBSS_computed", (DL_FUNC) &_tensorBSS_computed, 3},
+    {"_tensorBSS_computeb", (DL_FUNC) &_tensorBSS_computeb, 3},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_tensorBSS(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
 }

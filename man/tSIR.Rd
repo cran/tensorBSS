@@ -34,9 +34,7 @@ Arguments passed on to \code{\link{quantile}}.
   \item{Xmu }{The data location.}
   \item{datatype}{Character string with value "iid". Relevant for \code{\link{plot.tbss}}.}
 }
-\references{
-  \cite{Virta, J., Nordhausen, K. (2017), ???, \emph{submitted}, \bold{???},  ???--???.} 
-}
+
 \author{
   Joni Virta, Klaus Nordhausen
 }

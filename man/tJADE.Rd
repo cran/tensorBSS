@@ -13,8 +13,8 @@ tJADE(x, maxiter = 100, eps = 1e-06)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{Numeric array of an order at least two. It is assumed that the last dimension corresponds to the sampling units.}
-  \item{maxiter}{Maximum number of iterations. Passed on to \code{\link[JADE]{frjd}}.}
-  \item{eps}{Convergence tolerance. Passed on to \code{\link[JADE]{frjd}}.}
+  \item{maxiter}{Maximum number of iterations. Passed on to \code{\link[JADE]{rjd}}.}
+  \item{eps}{Convergence tolerance. Passed on to \code{\link[JADE]{rjd}}.}
 }
 
 \details{
@@ -37,7 +37,7 @@ A list with class 'tbss', inheriting from class 'bss', containing the following 
 \item{datatype}{Character string with value "iid". Relevant for \code{\link{plot.tbss}}.}
 }
 \references{
-\cite{Virta, J., Li, B., Nordhausen, K. and Oja, H., (2016), JADE for Tensor-Valued Observation, \emph{submitted}, \bold{???},  ???--???. Preprint available on ArXiv { http://arxiv.org/abs/1603.05406}.} 
+\cite{Virta, J., Li, B., Nordhausen, K. and Oja, H., (2017), JADE for Tensor-Valued Observation, to appear in Journal of Computational and Graphical Statistics. preprint available on ArXiv {http://arxiv.org/abs/1603.05406}.}
 }
 \author{
 Joni Virta

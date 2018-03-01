@@ -14,8 +14,8 @@ k_tJADE(x, k = NULL, maxiter = 100, eps = 1e-06)
 \arguments{
   \item{x}{Numeric array of an order at least two. It is assumed that the last dimension corresponds to the sampling units.}
   \item{k}{A vector with one less element than dimensions in \code{x}. The elements of \code{k} give upper bounds for cumulant matrix indices we diagonalize in each mode. Lower values mean faster computation times. The default value \code{NULL} puts k equal to 1 in each mode (the fastest choice).}
-  \item{maxiter}{Maximum number of iterations. Passed on to \code{\link[JADE]{frjd}}.}
-  \item{eps}{Convergence tolerance. Passed on to \code{\link[JADE]{frjd}}.}
+  \item{maxiter}{Maximum number of iterations. Passed on to \code{\link[JADE]{rjd}}.}
+  \item{eps}{Convergence tolerance. Passed on to \code{\link[JADE]{rjd}}.}
 }
 
 \details{
@@ -40,9 +40,9 @@ A list with class 'tbss', inheriting from class 'bss', containing the following 
 
 \references{
 \cite{Miettinen, J., Nordhausen, K., Oja, H. and Taskinen, S. (2013), Fast Equivariant JADE, 
-In the Proceedings of \emph{38th IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2013)}, 6153--6157.}
+In the Proceedings of \emph{38th IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2013)}, 6153--6157, \doi{10.1109/ICASSP.2013.6638847}}
 
-\cite{Virta, J., Li, B., Nordhausen, K. and Oja, H., (2016), JADE for Tensor-Valued Observation, \emph{submitted}, \bold{???},  ???--???. Preprint available on ArXiv { http://arxiv.org/abs/1603.05406}.} 
+\cite{Virta, J., Li, B., Nordhausen, K. and Oja, H., (201X), JADE for Tensor-Valued Observation, to appear in Journal of Computational and Graphical Statistics, preprint available on ArXiv {http://arxiv.org/abs/1603.05406}.} 
 }
 
 \author{
