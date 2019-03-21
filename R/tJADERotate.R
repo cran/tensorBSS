@@ -2,7 +2,7 @@ tJADERotate <-
 function(x, k = NULL, maxiter, eps){
   r <- length(dim(x)) - 1
   
-  rotateStack <- list()
+  rotateStack <- vector("list", r)
   for(m in 1:r){
     pm <- dim(x)[m]
     if(is.null(k)){

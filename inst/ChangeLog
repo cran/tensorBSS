@@ -1,5 +1,12 @@
 LOG of the CHANGES in the package tensorBSS
 
+Version 0.3.5:
+* Added the functions tTUCKER(), tPCAladle(), tensorTransform2(), tensorBoot(), print.tladle() and ggtladleplot()
+* Added Christoph Koesner as an author
+* Changed list initialization from list() to vector("list", r)
+* Added a remark to tensorVectorize.Rd that it returns a "transposed" data matrix
+* Modified tensorCentering() and tensorStandardizing() to accept also user-specified location and scatters to be used for standardization.
+
 Version 0.3.4:
 * Added tPP() for running tensorial projection pursuit
 * Added the option k = 0 to k_tJADE() for not unmixing a mode at all

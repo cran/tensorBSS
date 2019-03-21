@@ -2,7 +2,7 @@ tgFOBIRotate <-
 function(x, lags, maxiter, eps){
   r <- length(dim(x)) - 1
   
-  rotateStack <- list()
+  rotateStack <- vector("list", r)
   for(m in 1:r){
     pm <- dim(x)[m]
     lagStack <- matrix(0, pm*length(lags), pm)

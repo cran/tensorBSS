@@ -2,20 +2,20 @@
 \alias{tensorCentering}
 \title{Center an Array of Observations}
 \description{
-Centers an array of array-valued observations by substracting the mean array from each observation.
+Centers an array of array-valued observations by substracting a location array (the mean array by default) from each observation.
 }
 \usage{
-tensorCentering(x)
+tensorCentering(x, location = NULL)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{Array of order at least two with the last dimension corresponding to the sampling units.}
+  \item{location}{The location to be used in the centering. Either \code{NULL}, defaulting to the mean array, or a user-specified \eqn{p_1 \times p_2 \times \ldots \times p_r}{p_1 x p_2 x ... x p_r}-dimensional array.}
 }
 \details{
-Centers a \eqn{p_1 \times p_2 \times \ldots \times p_r \times n}{p_1 x p_2 x ... x p_r x n}-dimensional array by substracting the \eqn{p_1 \times p_2 \times \ldots \times p_r}{p_1 x p_2 x ... x p_r}-dimensional array of element-wise means from each of the observed arrays.
+Centers a \eqn{p_1 \times p_2 \times \ldots \times p_r \times n}{p_1 x p_2 x ... x p_r x n}-dimensional array by substracting the \eqn{p_1 \times p_2 \times \ldots \times p_r}{p_1 x p_2 x ... x p_r}-dimensional \code{location} from each of the observed arrays.
 }
 \value{
-Array of centered observations with the same dimensions as the input array.
+Array of centered observations with the same dimensions as the input array. The used location is returned as attribute \code{"location"}.
 }
 \author{Joni Virta}
 \examples{

@@ -2,7 +2,7 @@
 \alias{tensorTransform}
 \title{Linear Transformation of Tensors from mth Mode}
 \description{
-Applies a linear transformation to the mth mode of each individual tensor in an array of tensors
+Applies a linear transformation to the mth mode of each individual tensor in an array of tensors.
 }
 \usage{
 tensorTransform(x, A, m)

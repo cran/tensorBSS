@@ -37,7 +37,7 @@ A list with class 'tbss', inheriting from class 'bss', containing the following 
 \item{datatype}{Character string with value "iid". Relevant for \code{\link{plot.tbss}}.}
 }
 \references{
-\cite{Virta, J., Li, B., Nordhausen, K. and Oja, H., (2017), JADE for Tensor-Valued Observation, to appear in Journal of Computational and Graphical Statistics. preprint available on ArXiv {http://arxiv.org/abs/1603.05406}.}
+\cite{Virta J., Li B., Nordhausen K., Oja H. (2018): JADE for tensor-valued observations, Journal of Computational and Graphical Statistics, Volume 27, p. 628 - 637, \doi{10.1080/10618600.2017.1407324}} 
 }
 \author{
 Joni Virta

@@ -12,8 +12,8 @@ Plots the most interesting components (in the sense of extreme kurtosis) obtaine
 }
 \arguments{
   \item{x}{Object of class tbss.}
-  \item{first}{Number of components with maximal kurtosis to be selected. See \code{\link{selectComponents}} for details.}
-  \item{last}{Number of components with minimal kurtosis to be selected. See \code{\link{selectComponents}} for details.}
+  \item{first}{Number of components with maximal kurtosis to be selected.\cr See \code{\link{selectComponents}} for details.}
+  \item{last}{Number of components with minimal kurtosis to be selected.\cr See \code{\link{selectComponents}} for details.}
   \item{main}{The title of the plot.}
   \item{datatype}{Parameter for choosing the type of plot, either \code{NULL}, \code{"iid"} or \code{"ts"}. The default \code{NULL} means the value from the tbss object \code{x} is taken.}
   \item{\dots}{Further arguments to be passed to the plotting functions, see details.}

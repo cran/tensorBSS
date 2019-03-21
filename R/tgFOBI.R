@@ -16,8 +16,9 @@ function(x, lags = 0:12, maxiter = 100, eps = 1e-06){
   rotat <- tgFOBIRotate(x, lags, maxiter = maxiter, eps = eps)
   x <- rotat$x
   
-  W <- list()
-  for(i in 1:length(stand$S)){
+  r <- length(stand$S)
+  W <- vector("list", r)
+  for(i in 1:r){
     W[[i]] <- rotat$U[[i]]%*%stand$S[[i]]
   }
   

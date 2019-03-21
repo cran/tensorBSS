@@ -42,7 +42,9 @@ A list with class 'tbss', inheriting from class 'bss', containing the following 
 \cite{Miettinen, J., Nordhausen, K., Oja, H. and Taskinen, S. (2013), Fast Equivariant JADE, 
 In the Proceedings of \emph{38th IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2013)}, 6153--6157, \doi{10.1109/ICASSP.2013.6638847}}
 
-\cite{Virta, J., Li, B., Nordhausen, K. and Oja, H., (201X), JADE for Tensor-Valued Observation, to appear in Journal of Computational and Graphical Statistics, preprint available on ArXiv {http://arxiv.org/abs/1603.05406}.} 
+\cite{Virta J., Li B., Nordhausen K., Oja H. (2018): JADE for tensor-valued observations, Journal of Computational and Graphical Statistics, Volume 27, p. 628 - 637, \doi{10.1080/10618600.2017.1407324}} 
+
+\cite{Virta J., Lietzen N., Ilmonen P., Nordhausen K., (2018), Asymptotically and computationally efficient tensorial JADE, preprint available on arXiv {https://arxiv.org/abs/1808.00791}.}
 }
 
 \author{

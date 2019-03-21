@@ -21,7 +21,7 @@ k_tJADE <-
     rotat <- tJADERotate(x, k, maxiter = maxiter, eps = eps)
     x <- rotat$x
     
-    W <- list()
+    W <- vector("list", r)
     for(i in 1:r){
       if(k[i] == 0){
         W[[i]] <- diag(dim(x)[i])

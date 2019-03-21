@@ -21,8 +21,8 @@ tPP <-
     xst <- stand$x
     rotat <- tFOBIRotate(xst, norm)
     
-    W <- list()
     r <- length(stand$S)
+    W <- vector("list", r)
     s <- xst
     iter <- rep(0, r)
     for(i in 1:r){

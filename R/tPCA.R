@@ -8,8 +8,8 @@ function(x, p = NULL, d = NULL){
   x <- tensorCentering(x)
   
   # Compute rotations
-  U <- list()
-  D <- list()
+  U <- vector("list", r)
+  D <- vector("list", r)
   for(m in 1:r){
     mCov <- mModeCovariance(x, m, center = FALSE)
     mEig <- eigen(mCov, symmetric = TRUE)
