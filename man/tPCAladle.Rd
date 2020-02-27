@@ -65,7 +65,7 @@ Klaus Nordhausen
 }
 \examples{
 library(ICtest)
-n <- 500
+n <- 200
 sig <- 0.6
 
 Z <- rbind(sqrt(0.7)*rt(n,df=5)*sqrt(3/5),

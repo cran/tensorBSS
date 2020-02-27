@@ -13,8 +13,8 @@ the implementations of the following blind source separation methods for tensor-
 \tabular{ll}{
 Package: \tab tensorBSS\cr
 Type: \tab Package\cr
-Version: \tab 0.3.5\cr
-Date: \tab 2019-03-20\cr
+Version: \tab 0.3.6\cr
+Date: \tab 2020-02-26\cr
 License: \tab GPL (>= 2)\cr
 }
 

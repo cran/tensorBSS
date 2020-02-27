@@ -73,7 +73,7 @@ tMD(tjade$W, list(A1, A2))
 # Digit data example
 # Running will take a few minutes
 
-library(ElemStatLearn)
+data(zip.train)
 x <- zip.train
 
 rows <- which(x[, 1] == 0 | x[, 1] == 1)
