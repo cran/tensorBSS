@@ -1,5 +1,9 @@
 LOG of the CHANGES in the package tensorBSS
 
+Version 0.3.7:
+* Made the use of the suggested package stochvol conditional in the examples of plot.tbss.Rd and tGFOBI.Rd.
+* Added the package fICA as a suggested package.
+
 Version 0.3.6:
 * Removed from the list of suggested packages the now-deprecated package ElemStatLearn, in which the data set zip.train used in several of the package examples could be found
 * Added the data sets zip.train and zip.test (originally in ElemStatLearn) to the package
