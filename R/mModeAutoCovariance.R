@@ -1,6 +1,7 @@
 mModeAutoCovariance <-
-function(x, m, lag, center=TRUE){
+function(x, m, lag, center = TRUE, normalize = TRUE){
   if(center == TRUE) x <- tensorCentering(x)
   xm <- mFlatten(x, m)
-  mAutoCovMatrix(xm, lag)
+  normalize_int <- normalize*1
+  mAutoCovMatrix(xm, lag, normalize_int)
 }

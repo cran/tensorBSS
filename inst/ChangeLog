@@ -1,5 +1,14 @@
 LOG of the CHANGES in the package tensorBSS
 
+Version 0.3.8:
+* Added the option "normalize"" to functions mModeCovariance and mModeAutoCovariance that allows bypassing the normalization with the product of auxiliary mode sizes.
+* Added the function "mFlatten".
+* Added function "tPCAaug" and the corresponding printing function.
+* Udpated some references.
+* Una Radojicic became a contributor.
+* Added the function "ggtaugplot".
+* Added the arguments "position" and "scales" to the function "ggtladleplot".
+
 Version 0.3.7:
 * Made the use of the suggested package stochvol conditional in the examples of plot.tbss.Rd and tGFOBI.Rd.
 * Added the package fICA as a suggested package.

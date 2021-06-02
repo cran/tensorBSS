@@ -5,7 +5,7 @@
 Estimates the m-mode autocovariance matrix from an array of array-valued observations with the specified lag.
 }
 \usage{
-mModeAutoCovariance(x, m, lag, center = TRUE)
+mModeAutoCovariance(x, m, lag, center = TRUE, normalize = TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -13,6 +13,7 @@ mModeAutoCovariance(x, m, lag, center = TRUE)
   \item{m}{The mode with respect to which the autocovariance matrix is to be computed.}
   \item{lag}{The lag with respect to which the autocovariance matrix is to be computed.}
   \item{center}{Logical, indicating whether the observations should be centered prior to computing the autocovariance matrix. Default is \code{TRUE}.}
+  \item{normalize}{Logical, indicating whether the resulting matrix is divided by \code{p_1 \ldots p_{m-1} p_{m+1} \ldots p_r} or not. Default is \code{TRUE}.}
 }
 \details{
 The m-mode autocovariance matrix provides a higher order analogy for the ordinary autocovariance matrix of a random vector and is computed for a random tensor \eqn{X_t}{X_t} of size \eqn{p_1 \times p_2 \times \ldots \times p_r}{p_1 x p_2 x ... x p_r} as \eqn{Cov_{m \tau}(X_t) = E(X_t^{(m)} X_{t+\tau}^{(m)T})/(p_1 \ldots p_{m-1} p_{m+1} \ldots p_r)}{Cov_m,tau(X_t) = E(X_t(m) X_(t+tau)(m)^T)/(p_1 ... p_(m-1) p_(m+1) ... p_r)}, where \eqn{X_t^{(m)}}{X_t(m)} is the centered \eqn{m}{m}-flattening of \eqn{X_t}{X_t} and \eqn{\tau}{tau} is the desired \code{lag}. The algorithm computes the estimate of this based on the sample \code{x}.

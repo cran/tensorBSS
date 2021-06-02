@@ -1,22 +1,21 @@
-\name{ggtladleplot}
-\alias{ggtladleplot}
+\name{ggtaugplot}
+\alias{ggtaugplot}
 
 \title{
-Ladle plot for each mode of an object of class tladle using ggplot2
+Augmentation plot for each mode of an object of class taug using ggplot2
 }
 \description{
-The ladle plot is a measure for deciding about the number of interesting components. Of interest for the ladle criterion is the minimum.
-The function here offers however also to plot other criterion values which are part of the actual ladle criterion. 
+The augmentation plot is a measure for deciding about the number of interesting components. Of interest for the augmentation plot, which is quite similar to the ladle plot, is the minimum.
+The function offers, however, also the possibility to plot other criterion values that combined make up the actual criterion. 
 }
 \usage{
-ggtladleplot(x, crit = "gn", type = "l", scales = "free", 
-  position = "horizontal", ylab = crit,  
-  xlab = "component", main = deparse(substitute(x)), ...)
+ggtaugplot(x, crit = "gn", type = "l", scales = "free", position = "horizontal",
+  ylab = crit, xlab = "component", main = deparse(substitute(x)),  ...)
 }
 
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{an object of class ladle.}
+  \item{x}{an object of class taug.}
   \item{crit}{the criterion to be plotted, options are \code{"gn"}, \code{"fn"}, \code{"phin"} and \code{"lambda"}.}
   \item{type}{plotting type, either lines \code{l} or points \code{p}.}
   \item{position}{placement of augmentation plots for separate modes, options are \code{"horizontal"} and \code{"vertical"}.}
@@ -27,7 +26,7 @@ ggtladleplot(x, crit = "gn", type = "l", scales = "free",
   \item{\dots}{other arguments for the plotting functions.}
 }
 \details{
-The main criterion of the ladle is the scaled sum of the eigenvalues and the measure of variation of the eigenvectors up to the component of interest.
+The main criterion of the augmentation criterion is the scaled sum of the eigenvalues and the measure of variation of the eigenvectors up to the component of interest.
 
 The sum is denoted \code{"gn"} and the individual parts are \code{"fn"} for the measure of the eigenvector variation and \code{"phin"} for the scaled eigenvalues.
 The last option \code{"lambda"} corresponds to the unscaled eigenvalues yielding then a screeplot.
@@ -36,20 +35,23 @@ The plot is drawn separately for each mode of the data.
 }
 
 \references{
-\cite{Koesner, C, Nordhausen, K. and Virta, J. (2019), Estimating the signal tensor dimension using tensorial PCA. Manuscript.}
-
-\cite{Luo, W. and Li, B. (2016), Combining Eigenvalues and Variation of Eigenvectors for Order Determination, Biometrika, 103. 875--887. <doi:10.1093/biomet/asw051>}
+\cite{Radojicic, U., Lietzen, N., Nordhausen, K. and Virta, J. (2021), On order determinaton in 2D PCA. Manuscript.}
 }
+
+
 \author{
-Klaus Nordhausen, Joni Virta
+Klaus Nordhausen, Joni Virta, Una Radojicic
 }
 
 \seealso{
-\code{\link{tPCAladle}}
+\code{\link{tPCAaug}}
 }
 \examples{
 library(ICtest)
-n <- 500
+
+
+# matrix-variate example
+n <- 200
 sig <- 0.6
 
 Z <- rbind(sqrt(0.7)*rt(n,df=5)*sqrt(3/5),
@@ -70,12 +72,30 @@ EPS <- array(rnorm(12*8*n, mean=0, sd=sig), dim=c(12,8,n))
 X <- Y + EPS
 
 
-TEST <- tPCAladle(X, n.boot = 100)
+TEST <- tPCAaug(X)
 TEST
-ggtladleplot(TEST, crit = "gn")
-ggtladleplot(TEST, crit = "fn")
-ggtladleplot(TEST, crit = "phin")
-ggtladleplot(TEST, crit = "lambda")
+ggtaugplot(TEST)
+
+# higher order tensor example
+
+Z2 <- rnorm(n*3*2*4*6)
+
+dim(Z2) <- c(3,2,4,6,n)
+
+U2.1 <- rorth(10)[ ,1:3]
+U2.2 <- rorth(8)[ ,1:2]
+U2.3 <- rorth(5)[ ,1:4]
+U2.4 <- rorth(15)[ ,1:6]
+
+U2 <- list(U1 = U2.1, U2 = U2.2, U3 = U2.3, U4 = U2.4)
+Y2 <- tensorTransform2(Z2, U2, 1:4)
+EPS2 <- array(rnorm(10*8*5*15*n, mean=0, sd=sig), dim=c(10, 8, 5, 15, n))
+X2 <- Y2 + EPS2
+
+
+TEST2 <- tPCAaug(X2)
+ggtaugplot(TEST2, crit = "lambda", position = "vertical",
+ scales = "free_x")
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

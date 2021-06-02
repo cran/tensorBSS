@@ -150,12 +150,14 @@ SEXP mJADEMatrix(SEXP varx, SEXP vari, SEXP varj, SEXP varcov) {
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-SEXP matrixCovariance(SEXP varx) {
+SEXP matrixCovariance(SEXP varx, SEXP varnormalize) {
   
   cube xcube = as<cube>(varx);
   int rows = xcube.n_rows;
   int cols = xcube.n_cols;
   int slices = xcube.n_slices;
+  
+  int normalize = as<int>(varnormalize);
   
   mat matCov(rows, rows, fill::zeros);
   
@@ -164,7 +166,11 @@ SEXP matrixCovariance(SEXP varx) {
     matCov = matCov + xcube.slice(i)*xcube.slice(i).t();
   }
   
-  matCov = matCov/(cols*slices);
+  if (normalize == 1) {
+    matCov = matCov/(cols*slices);
+  } else {
+    matCov = matCov/(slices);
+  }
   
   return Rcpp::wrap(matCov);
 }
@@ -173,14 +179,16 @@ SEXP matrixCovariance(SEXP varx) {
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-SEXP mAutoCovMatrix(SEXP varx, SEXP varlag) {
+SEXP mAutoCovMatrix(SEXP varx, SEXP varlag, SEXP varnormalize) {
   
   cube xcube = as<cube>(varx);
   int rows = xcube.n_rows;
   int cols = xcube.n_cols;
   int slices = xcube.n_slices;
-    
+  
   int lag = as<int>(varlag);
+  
+  int normalize = as<int>(varnormalize);
 	
   mat matAutoCov(rows, rows, fill::zeros);
   
@@ -188,7 +196,12 @@ SEXP mAutoCovMatrix(SEXP varx, SEXP varlag) {
   {
     matAutoCov = matAutoCov + xcube.slice(t)*xcube.slice(t + lag).t();
   }
-  matAutoCov = matAutoCov/(cols*(slices - lag));
+  
+  if (normalize == 1) {
+    matAutoCov = matAutoCov/(cols*(slices - lag));
+  } else {
+    matAutoCov = matAutoCov/((slices - lag));
+  }
    
   return Rcpp::wrap(matAutoCov);
 }

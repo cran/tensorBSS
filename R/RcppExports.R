@@ -25,12 +25,12 @@ mJADEMatrix <- function(varx, vari, varj, varcov) {
     .Call(`_tensorBSS_mJADEMatrix`, varx, vari, varj, varcov)
 }
 
-matrixCovariance <- function(varx) {
-    .Call(`_tensorBSS_matrixCovariance`, varx)
+matrixCovariance <- function(varx, varnormalize) {
+    .Call(`_tensorBSS_matrixCovariance`, varx, varnormalize)
 }
 
-mAutoCovMatrix <- function(varx, varlag) {
-    .Call(`_tensorBSS_mAutoCovMatrix`, varx, varlag)
+mAutoCovMatrix <- function(varx, varlag, varnormalize) {
+    .Call(`_tensorBSS_mAutoCovMatrix`, varx, varlag, varnormalize)
 }
 
 mTGFOBIMatrix <- function(varx, varlag) {

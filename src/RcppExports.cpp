@@ -79,25 +79,27 @@ BEGIN_RCPP
 END_RCPP
 }
 // matrixCovariance
-SEXP matrixCovariance(SEXP varx);
-RcppExport SEXP _tensorBSS_matrixCovariance(SEXP varxSEXP) {
+SEXP matrixCovariance(SEXP varx, SEXP varnormalize);
+RcppExport SEXP _tensorBSS_matrixCovariance(SEXP varxSEXP, SEXP varnormalizeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type varx(varxSEXP);
-    rcpp_result_gen = Rcpp::wrap(matrixCovariance(varx));
+    Rcpp::traits::input_parameter< SEXP >::type varnormalize(varnormalizeSEXP);
+    rcpp_result_gen = Rcpp::wrap(matrixCovariance(varx, varnormalize));
     return rcpp_result_gen;
 END_RCPP
 }
 // mAutoCovMatrix
-SEXP mAutoCovMatrix(SEXP varx, SEXP varlag);
-RcppExport SEXP _tensorBSS_mAutoCovMatrix(SEXP varxSEXP, SEXP varlagSEXP) {
+SEXP mAutoCovMatrix(SEXP varx, SEXP varlag, SEXP varnormalize);
+RcppExport SEXP _tensorBSS_mAutoCovMatrix(SEXP varxSEXP, SEXP varlagSEXP, SEXP varnormalizeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type varx(varxSEXP);
     Rcpp::traits::input_parameter< SEXP >::type varlag(varlagSEXP);
-    rcpp_result_gen = Rcpp::wrap(mAutoCovMatrix(varx, varlag));
+    Rcpp::traits::input_parameter< SEXP >::type varnormalize(varnormalizeSEXP);
+    rcpp_result_gen = Rcpp::wrap(mAutoCovMatrix(varx, varlag, varnormalize));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -187,8 +189,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_tensorBSS_mFOBIMatrix", (DL_FUNC) &_tensorBSS_mFOBIMatrix, 1},
     {"_tensorBSS_mFOBIMatrixNorm", (DL_FUNC) &_tensorBSS_mFOBIMatrixNorm, 1},
     {"_tensorBSS_mJADEMatrix", (DL_FUNC) &_tensorBSS_mJADEMatrix, 4},
-    {"_tensorBSS_matrixCovariance", (DL_FUNC) &_tensorBSS_matrixCovariance, 1},
-    {"_tensorBSS_mAutoCovMatrix", (DL_FUNC) &_tensorBSS_mAutoCovMatrix, 2},
+    {"_tensorBSS_matrixCovariance", (DL_FUNC) &_tensorBSS_matrixCovariance, 2},
+    {"_tensorBSS_mAutoCovMatrix", (DL_FUNC) &_tensorBSS_mAutoCovMatrix, 3},
     {"_tensorBSS_mTGFOBIMatrix", (DL_FUNC) &_tensorBSS_mTGFOBIMatrix, 2},
     {"_tensorBSS_mTGJADEMatrix", (DL_FUNC) &_tensorBSS_mTGJADEMatrix, 4},
     {"_tensorBSS_computeh", (DL_FUNC) &_tensorBSS_computeh, 3},

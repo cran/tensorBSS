@@ -1,7 +1,7 @@
 mModeTGJADEMatrix <-
 function(x, m, i, j, lag, pm){
   xm <- mFlatten(x, m)
-  matCov <- matrixCovariance(xm)
+  matCov <- matrixCovariance(xm, 1)
   Eij <- matrix(0, pm, pm)
   Eij[i, j] <- 1
   mat1 <- mTGJADEMatrix(xm, i, j, c(0, lag, lag, 0))
