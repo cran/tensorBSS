@@ -13,8 +13,8 @@ the implementations of the following blind source separation methods for tensor-
 \tabular{ll}{
 Package: \tab tensorBSS\cr
 Type: \tab Package\cr
-Version: \tab 0.3.8\cr
-Date: \tab 2021-06-02\cr
+Version: \tab 0.3.9\cr
+Date: \tab 2024-09-12\cr
 License: \tab GPL (>= 2)\cr
 }
 
@@ -38,6 +38,10 @@ Maintainer: Joni Virta <joni.virta@outlook.com>
 \cite{Virta J., Li B., Nordhausen K., Oja H. (2018): JADE for tensor-valued observations, Journal of Computational and Graphical Statistics, 27, 628 - 637, \doi{10.1080/10618600.2017.1407324}} 
 
 \cite{Virta J., Lietzen N., Ilmonen P., Nordhausen K. (2021): Fast tensorial JADE, Scandinavian Journal of Statistics, 48, 164-187, \doi{10.1111/sjos.12445}}
+
+\cite{Radojicic, U., Lietzen, N., Nordhausen, K. and Virta, J. (2021): Dimension estimation in two-dimensional PCA. In S. Loncaric, T. Petkovic and D. Petrinovic (editors) "Proceedings of the 12 International Symposium on Image and Signal Processing and Analysis (ISPA 2021)", 16-22. \doi{10.1109/ISPA52656.2021.9552114}.}
+
+\cite{Radojicic, U., Lietzen, N., Nordhausen, K. and Virta, J. (2022): Order determination for tensor-valued observations using data augmentation. <arXiv:2207.10423>.}
 
 \cite{Koesner, C, Nordhausen, K. and Virta, J. (2019), Estimating the signal tensor dimension using tensorial PCA. Manuscript.}
 }

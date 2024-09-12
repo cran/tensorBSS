@@ -30,7 +30,7 @@ tPCAaug <- function(x, noise = "median", naug = 1, nrep = 1, sigma2=NULL, alpha=
                     median = median(AllScaledSig2),
                     last = min(AllScaledSig2),
                     quantile = { if (is.null(alpha)) stop("'alpha' must be numeric")
-                      cut <- quantile(AllScaledSig2, props = alpha)
+                      cut <- quantile(AllScaledSig2, probs = alpha)
                       mean(AllScaledSig2[AllScaledSig2 <=  cut]) },
                     known = ifelse(is.null(sigma2), 
                                    stop("'sigma2' must be numeric"), 

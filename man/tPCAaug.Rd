@@ -78,8 +78,11 @@ A list of class `taug` inheriting from class `tladle` and containing:
   }
 
 \references{
-\cite{Radojicic, U., Lietzen, N., Nordhausen, K. and Virta, J. (2021), On order determinaton in 2D PCA. Manuscript.}
+\cite{Radojicic, U., Lietzen, N., Nordhausen, K. and Virta, J. (2021): Dimension Estimation in Two-Dimensional PCA. In S. Loncaric, T. Petkovic and D. Petrinovic (editors) "Proceedings of the 12 International Symposium on Image and Signal Processing and Analysis (ISPA 2021)", 16-22. \doi{10.1109/ISPA52656.2021.9552114}.}
+
+\cite{Radojicic, U., Lietzen, N., Nordhausen, K. and Virta, J. (2022): Order Determination for Tensor-valued Observations Using Data Augmentation. <arXiv:2207.10423>.}
 }
+
 \author{
 Klaus Nordhausen, Una Radojicic
 }
@@ -143,7 +146,7 @@ EPS2 <- array(rnorm(12*8*5*20*n, mean=0, sd=sig), dim=c(12, 8, 5, 20, n))
 X2 <- Y2 + EPS2
 
 
-TEST2 <- tPCAaug(X2)
+TEST2 <- tPCAaug(X2, noise = "quantile", alpha =0.3)
 TEST2
 }
 \keyword{multivariate}

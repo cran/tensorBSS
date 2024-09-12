@@ -6,6 +6,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // rnormCube
 SEXP rnormCube(SEXP varp1, SEXP varp2, SEXP varp3);
 RcppExport SEXP _tensorBSS_rnormCube(SEXP varp1SEXP, SEXP varp2SEXP, SEXP varp3SEXP) {

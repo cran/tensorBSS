@@ -1,6 +1,6 @@
-60bcf12c7b5c953f40802bf567137c79 *DESCRIPTION
+8f7aef45995b512296a45f8b325b5b67 *DESCRIPTION
 363d623ea367887a62de04c303fda11c *NAMESPACE
-0e24d66262414473c20064c4312296e4 *R/RcppExports.R
+36e3149d9567086a3f7e1ace96f12ab7 *R/RcppExports.R
 178af85c2aabce3774755f081fbe35b2 *R/arraySelectLast.R
 fc5527d768e99f90d9fc3051b8d9fb77 *R/cyclicalPermute.R
 5bac27c4f10e0c2b935520382f3dece4 *R/ggtaugplot.R
@@ -27,7 +27,7 @@ a03465817c2c0d2d5bc4f0344796fad0 *R/tJADE.R
 f95fe97403b4dfc1562dba94cd3729a3 *R/tNSS.SD.R
 053fc8f81d90d52c6e8511f0174e7dc8 *R/tNSS.TD.JD.R
 c08b3756bb20f595ed3974b68f758d52 *R/tPCA.R
-a15b4090076b875523060373c909651f *R/tPCAaug.R
+270ee027a82b8e01d2bb78cab79a14a3 *R/tPCAaug.R
 510b4bcdd05a6e66dd3cc0961ce55d93 *R/tPCAladle.R
 ddacfb25d285518832d02704bef3e70d *R/tPP.R
 ef2c1517ac4c227b4430ef6d54b94664 *R/tPPRotate.R
@@ -47,11 +47,11 @@ b7585bb7a4c60dba60b3e29a491214c3 *R/tensorCentering.R
 f40cfd8806d31a9aa6ace8a5635b4f9f *R/tgJADE.R
 38c5975d93fca2053a824735ddf7fcc9 *R/tgJADERotate.R
 4127779fd1e8e33da04d53d6fc1dd77a *R/zip2image.R
-c86422ff7ea6244e39729f67d18b0d15 *build/partial.rdb
+aa5e5a2cbfaea3d9b6cdbe378ac48cee *build/partial.rdb
 e6fa1f91ad7c3cd43a4cabb313c39dee *data/datalist
 213610705fb453b9dfe916a02f6c7be6 *data/zip.test.RData
 3e37e46fa4937e76cf4c92db29460640 *data/zip.train.RData
-d1760f3688355e3fb8babefdc2d2ea13 *inst/ChangeLog
+b159a805f5347f3a43ee82f2ca2309de *inst/ChangeLog
 e9af02f119fd06033130301cd319d461 *man/ggtaugplot.Rd
 0ec057c975671a2de30dcc0609b7a41a *man/ggtladleplot.Rd
 b584e0e2ce03fbf3c007699979502603 *man/k_tJADE.Rd
@@ -71,13 +71,13 @@ c6926e24d80f971823deb11df2463d6f *man/tNSS.JD.Rd
 03b1311884af01c3d3e12173ff985dc1 *man/tNSS.SD.Rd
 950651815a102a44cc4c78739194efc0 *man/tNSS.TD.JD.Rd
 71a6ee4fc2f31e32ecf71077af11f483 *man/tPCA.Rd
-9745f584a14d889eb87f76e8d17cc2a7 *man/tPCAaug.Rd
+562c464c28f9339da9cdf924f45eb4ef *man/tPCAaug.Rd
 32cdc14de68fd47ed90bd4ba66ac6e24 *man/tPCAladle.Rd
 c90cf96eeb90f200f68ed4ae9e7dc474 *man/tPP.Rd
 bdcb256b070ec5a23456ab7cdb64fb35 *man/tSIR.Rd
 de1f05e1596d75d0f075ea5b5dce6162 *man/tSOBI.Rd
 57efc5be9f72418740a7e906d94d89a3 *man/tTUCKER.Rd
-f9fe6d97d76f06f1a3a26982e56555b6 *man/tensorBSS-package.Rd
+5d8766a09394091db680bf4c4fad15a5 *man/tensorBSS-package.Rd
 8fe1c9820551bc9c0eb8be5955e86aad *man/tensorBoot.Rd
 e3bd7dbdf9615a44b8bbe3b53a64d38a *man/tensorCentering.Rd
 c36e09ab6ce2ee8644d88b103c5d1fbc *man/tensorStandardize.Rd
@@ -89,6 +89,6 @@ ad67aecebf68add02f56fce95807edb6 *man/tensorVectorize.Rd
 453df7560fb59247e44095f3f61b0a5c *man/zip2image.Rd
 95a5e0dc5dbdec9c251c142cb4cad286 *src/Makevars
 2a33ba1c4b4b0d46d9ed823230c620e1 *src/Makevars.win
-8c1a843c216da7e13c86bacd299efa21 *src/RcppExports.cpp
+db4b684e346680c607db3f11f803dc23 *src/RcppExports.cpp
 794c542c1ae0c12c9eef29205d9708a6 *src/tensorBSS.cpp
 cf78f4d3039105d6fbd25baa84a45c78 *src/tensorBSS.h

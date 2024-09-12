@@ -1,7 +1,11 @@
 LOG of the CHANGES in the package tensorBSS
 
+Version 0.3.9:
+* Fixed a bug in "tPCAaug" which might have caused problems when using the quantile method to estimate the noise variance.
+* Updated some references.
+
 Version 0.3.8:
-* Added the option "normalize"" to functions mModeCovariance and mModeAutoCovariance that allows bypassing the normalization with the product of auxiliary mode sizes.
+* Added the option "normalize" to functions mModeCovariance and mModeAutoCovariance that allows bypassing the normalization with the product of auxiliary mode sizes.
 * Added the function "mFlatten".
 * Added function "tPCAaug" and the corresponding printing function.
 * Udpated some references.
